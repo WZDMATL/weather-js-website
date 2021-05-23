@@ -1,0 +1,122 @@
+body {
+  font-family: "Comfortaa", cursive;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(239, 246, 249) 0%,
+    rgb(206, 239, 253) 90%
+  );
+}
+h1,
+h2 {
+  text-shadow: 1px 1px 2px transparent;
+  color: black;
+  font-size: 20px;
+}
+header {
+  text-align: right;
+  margin-left: 160px;
+  margin-right: 10px;
+}
+a {
+  color: black;
+  text-decoration: italics;
+}
+ol {
+  margin-top: -30px;
+}
+li {
+  list-style-type: none;
+}
+form {
+  text-align: center;
+}
+.btn-cnt {
+  text-align: left;
+  margin-left: 30px;
+}
+#btnGo,
+#btnSearch {
+  margin: 0 auto;
+  margin-top: 5px;
+  padding: 1px 24px;
+  background: linear-gradient(
+    109.6deg,
+    rgb(255, 219, 47) 11.2%,
+    rgb(244, 253, 0) 100.2%
+  );
+  color: black;
+  font-size: 16px;
+  border: 1px solid yellow;
+  border-radius: 20px;
+  box-shadow: 2px 2px 9px #2345;
+  transition: all 500ms ease-in-out;
+  text-shadow: 1px 1px 2px rgb(39, 38, 35);
+}
+button:hover {
+  background: white;
+  color: white;
+  cursor: pointer;
+}
+#wrapper {
+  width: 100%;
+  clear: both;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 50vh;
+  margin-left: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.container {
+  width: 70%;
+  margin: 25px;
+  padding: 25px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: content-box;
+  border: 1px solid white;
+  border-radius: 8px;
+  box-shadow: 2px 2px 15px white;
+  color: white;
+  display: block;
+}
+.container-h2 {
+  box-sizing: content-box;
+  width: 100%;
+  margin-top: -90px;
+  margin-left: 25px;
+}
+#city {
+  font-size: 20px;
+  text-shadow: 1px 1px 2px cornsilk;
+}
+.details-0,
+.details,
+#details {
+  font-size: 12px;
+  text-shadow: 1px 1px 2px cornsilk;
+}
+.forecast-type {
+  text-align: center;
+  margin-top: -10px;
+  padding: 1px;
+  font-size: 18px;
+  text-shadow: 1px 1px 2px black;
+}
+.five-days {
+  padding-left: 10px;
+  padding-top: 20px;
+  font-size: 19px;
+}
+.day {
+  padding: 5px;
+  font-size: 15px;
+  text-shadow: 1px 1px 2px black;
+}
+input[type="search" i] {
+  padding: 15px 20px;
+  text-shadow: 1px 1px 2px cornsilk;
+}
+#searchinput {
+  padding: 0 50px;
+}
