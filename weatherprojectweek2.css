@@ -73,6 +73,7 @@ button:hover {
   padding: 25px;
   padding-right: 15px;
   padding-left: 15px;
+  padding-bottom: 1px;
   box-sizing: content-box;
   border: 1px solid white;
   border-radius: 8px;
@@ -119,4 +120,14 @@ input[type="search" i] {
 }
 #searchinput {
   padding: 0 50px;
+}
+.repo,
+.name {
+  font-size: 13px;
+  color: black;
+  padding-top: -20px;
+  margin-top: -20px;
+}
+.repo {
+  padding-left: 25px;
 }
