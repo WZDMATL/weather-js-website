@@ -97,6 +97,9 @@ button:hover {
   font-size: 12px;
   text-shadow: 1px 1px 2px cornsilk;
 }
+.details {
+  margin-left: 1px;
+}
 .forecast-type {
   text-align: center;
   margin-top: -10px;
