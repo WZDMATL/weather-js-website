@@ -26,11 +26,15 @@ h1Details.innerHTML = `${day} ${hour}:${minutes}`;
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-
+  let iconElement = document.querySelectory("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   document.querySelector("#tempNumber").innerHTML = Math.round(
     response.data.main.temp
   );
-
   document.querySelector(
     "#humidity"
   ).innerHTML = `${response.data.main.humidity}%`;
