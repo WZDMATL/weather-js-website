@@ -87,6 +87,21 @@ button:hover {
   margin-top: -90px;
   margin-left: 25px;
 }
+#fahTemp,
+#celTemp,
+#tempdivider {
+  font-size: 12px;
+  text-decoration: none;
+  cursor: default;
+}
+
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
 #city {
   font-size: 20px;
   text-shadow: 1px 1px 2px cornsilk;

@@ -24,9 +24,12 @@
       <div class="container">
         <header>
           <h1>
-            <span id="tempNumber">55</span>
-            <a href="#" id="fahTemp">°F</a>
-            <a href="#" id="celTemp">°C</a>
+            <div class="weather-temperature">
+              <span id="tempNumber"></span>
+              <a href="#" class="active" id="celTemp">°C</a>
+              <span id="tempdivider">|</span>
+              <a href="#" id="fahTemp">°F</a>
+            </div>
             <div id="city">Atlanta</div>
             <div id="details">Wednesday 21:16</div>
           </h1>
@@ -43,7 +46,7 @@
               />
             </div>
             <br />
-            Sunny
+            <span id="description"></span>
             <ul class="details">
               <li>Humidity: <span id="humidity"></span></li>
               <li>Wind: <span id="wind"></span></li>
@@ -96,7 +99,7 @@
           href="https://github.com/WZDMATL/weather-repository-week6.git"
           target="_blank"
           class="repo"
-          >open source code</a
+          >open-source code</a
         >
         <span class="name">by WZDM Management Agency</span>
       </div>

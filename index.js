@@ -26,15 +26,8 @@ h1Details.innerHTML = `${day} ${hour}:${minutes}`;
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  let iconElement = document.querySelectory("#icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
-  document.querySelector("#tempNumber").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celTemperature = response.data.main.temp;
+  document.querySelector("#tempNumber").innerHTML = Math.round(celTemperature);
   document.querySelector(
     "#humidity"
   ).innerHTML = `${response.data.main.humidity}%`;
@@ -43,6 +36,12 @@ function displayWeatherCondition(response) {
   ).innerHTML = `${response.data.wind.speed} km/h`;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -68,19 +67,33 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function convertC(event) {
+function displayfahTemperature(event) {
   event.preventDefault();
-  let tempC = document.querySelector("#tempNumber");
-  tempC.innerHTML = 8;
+  let temperatureElement = document.querySelector("#tempNumber");
+  celTemp.classList.remove("active");
+  fahTemp.classList.add("active");
+  let fahrenTemperature = (celTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenTemperature);
 }
-function convertF(event) {
+
+function displaycelTemperature(event) {
   event.preventDefault();
-  let tempF = document.querySelector("#tempNumber");
-  tempF.innerHTML = 55;
+  celTemp.classList.add("active");
+  fahTemp.classList.remove("active");
+  let temperatureElement = document.querySelector("#tempNumber");
+  temperatureElement.innerHTML = Math.round(celTemperature);
 }
+
+let celTemperature = null;
 
 let searchForm = document.querySelector("#search");
 searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#btnSearch");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let fahTemp = document.querySelector("#fahTemp");
+fahTemp.addEventListener("click", displayfahTemperature);
+
+let celTemp = document.querySelector("#celTemp");
+celTemp.addEventListener("click", displaycelTemperature);
